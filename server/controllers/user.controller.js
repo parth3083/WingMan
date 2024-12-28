@@ -37,3 +37,9 @@ export const loginUserController = async (req, res) => {
     return res.json(error);
   }
 };
+
+export const profileController = async (req, res) => {
+  return res.status(201).json({
+    user: req.user,
+  });
+};
