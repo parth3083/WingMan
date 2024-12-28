@@ -1,0 +1,70 @@
+# Node.js dependencies
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Logs
+logs/
+*.log
+*.log.*
+
+# Build directories
+dist/
+build/
+
+# Temporary files
+*.tmp
+*.temp
+*.swp
+*.swo
+*.bak
+*.orig
+
+# System files
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# IDE files
+.vscode/
+.idea/
+*.iml
+
+# Environment variables
+.env
+.env.local
+.env.*.local
+
+# Package manager lock files (optional, depending on your workflow)
+# Uncomment one if you do not want to track lock files
+# package-lock.json
+# yarn.lock
+# pnpm-lock.yaml
+
+# Miscellaneous
+*.out
+*.pid
+*.seed
+*.pid.lock
+
+# Testing
+coverage/
+.nyc_output/
+
+# Mac-specific files
+*.DS_Store
+
+# Python files (if applicable)
+*.pyc
+__pycache__/
+
+# Temporary folders
+tmp/
+temp/
+.cache/
+
+# Ignore local React Native files
+ios/Pods/
+android/.gradle/
+android/app/build/
