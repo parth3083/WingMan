@@ -5,7 +5,7 @@ function Home() {
   return (
       <div>Home
           <Link to={'/login'}>
-          Loign pAGE
+          Loign PAGE
           </Link>
 
     </div>
