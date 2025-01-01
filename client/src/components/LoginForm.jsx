@@ -4,7 +4,6 @@ import axios from "../config/axios";
 import { UserContext } from "../context/user.context";
 import { useNavigate } from "react-router-dom";
 
-
 function LoginForm() {
   const navigate = useNavigate();
   const { setUser } = useContext(UserContext);

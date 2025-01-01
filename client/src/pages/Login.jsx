@@ -1,6 +1,6 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
-import LoginForm from '../components/LoginForm';
+import React from "react";
+import { Link } from "react-router-dom";
+import LoginForm from "../components/LoginForm";
 
 function Login() {
   return (
@@ -8,7 +8,7 @@ function Login() {
       <h1 className="text-4xl font-bold text-white mb-6">Login</h1>
       <LoginForm />
       <p className="text-white mt-4">
-        Don't have an account?{' '}
+        Don't have an account?{" "}
         <Link to="/register" className="text-yellow-300 underline">
           Create one
         </Link>
