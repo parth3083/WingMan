@@ -1,13 +1,13 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import { Link } from 'react-router-dom'
+import { UserContext } from '../context/user.context'
+
 
 function Home() {
+  const {user} = useContext(UserContext)
   return (
-      <div>Home
-          <Link to={'/login'}>
-          Loign PAGE
-          </Link>
-
+    <div>
+     {JSON.stringify(user)}
     </div>
   )
 }

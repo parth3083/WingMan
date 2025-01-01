@@ -1,12 +1,28 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { useForm } from 'react-hook-form';
+import axios from "../config/axios"
+import { useNavigate } from "react-router-dom"
+import { UserContext } from '../context/user.context';
 
 function RegisterForm() {
-  const { register, handleSubmit, formState: { errors },reset } = useForm();
+  const {setUser}= useContext(UserContext)
+  const { register, handleSubmit, formState: { errors }, reset } = useForm();
+  const navigate = useNavigate();
 
   const onSubmit = data => {
-      console.log(data);
-      reset();
+     try {
+       axios.post("/users/register", data).then((res) => {
+         console.log(res.data);
+         localStorage.setItem("token", res.data.token);
+         setUser(res.data.user);
+         navigate('/')
+         reset();
+       }).catch((err) => {
+         console.log(err);
+      })
+     } catch (error) {
+      console.log(error)
+     }
   };
 
   return (
